@@ -1,31 +1,133 @@
-.App {
-  text-align: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gradient-background {
+  background: linear-gradient(to bottom, #CBCDD3, #C6BABC, #A4AEB6);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  overflow-x: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.card1:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card1 {
+  position: relative;
+  margin-left: 20%; /* Adjust margin as needed */
+  margin-right: 10px; /* Adjust margin as needed */
+  width: 100px;
+  min-width: 50vw;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column; /* Make card-content flex column */
+  justify-content: flex-start; /* Align items to the start */
+  align-items: flex-start; /* Align items to the start */
+  font-size: 4ch;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px; /* Adjust the height of the stripe */
+  background-color: #f0f0f0; /* Adjust the color of the stripe */
+  border-radius: 5px 5px 0 0; /* Ensures rounded corners only at the top */
+}
+
+.card-content {
+  position: relative;
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 10px; /* Adjust the left margin for the subject */
+}
+
+.card-details {
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+  flex-grow: 1; /* Allow the details section to grow and fill available space */
+  display: flex;
+  flex-direction: column; /* Arrange details content as a column */
+  margin-right: 20px;
+}
+
+.details {
+  flex-grow: 1; /* Expand details content to fill available space */
+  font-size: 15px;
+}
+
+.card-buttons {
+  margin-top: auto; /* Push the buttons to the bottom */
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the right */
+  gap: 10px; /* Adjust the space between buttons */
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #EFEFEF;
   color: white;
+  cursor: pointer;
+  color: black;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.more-options {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adjust as needed */
+  color: #AAAAAA;
+  font-size: 15px;
 }
 
-.heart {
-  color: #ff0000;
+.mac-icon {
+  font-size: 14px; /* Adjust size as needed */
+  margin-right: 10px; /* Adjust spacing between icon and text */
+  color: #AAAAAA;
 }
 
-.small {
-  font-size: 0.75rem;
+.card-line {
+  border-top: 1px solid #ccc; /* Add a border line style */
+  margin-top: 10px; /* Adjust margin as needed */
+  width: 90%; /* Ensures the line spans the full width */
+  margin-bottom: 10px;
+}
+
+.mail-icon {
+  margin-right: 8px; /* Adjust spacing */
+}
+.gray-box {
+  height: 70px; /* Adjust height */
+  width: 100%; /* Full width */
+  background-color: #e0e0e0; /* Gray color */
+  margin-top: 10px; /* Adjust spacing from details */
+  margin-bottom: 30px;
+}
+
+
+.map-location {
+  border: 1px solid #ccc; /* Adjust border style */
+  margin-bottom: 10px; /* Adjust spacing */
+  margin-top: 20px;
 }
